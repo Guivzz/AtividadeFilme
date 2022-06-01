@@ -11,7 +11,7 @@ const firebaseConfig = {
     storageBucket: "filmes-atividade.appspot.com",
     messagingSenderId: "620322745029",
     appId: "1:620322745029:web:8b4db7bf6ff3e7fcbd9eac"
-  
+
 };
 
 // Initialize Firebase

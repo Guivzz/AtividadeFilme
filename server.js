@@ -25,21 +25,21 @@ app.get('/filmes', function (req, res) {
 })
 
 app.post('/filmes', function (req, res) {
-    console.log("recebi requisição POST com body: ",req.body);
+    console.log("recebi requisição POST com body: ", req.body);
     //pega os dados enviados na requisição
     let dados = req.body
     let id = dados.id
     // Pega uma referência para o caminho /bandas/<ID>
-    let novaFilmeRef = ref(database, "/filmes/" + id)
+    let novoFilmeRef = ref(database, "/filmes/" + id)
     // Adiciona dados no firebase no caminho /bandas/<ID>
-    set(novaFilmeRef, dados).then(() => {
+    set(novoFilmeRef, dados).then(() => {
         console.log("Adicionado")
         return res.status(200).json(dados)
     })
 })
 
 app.put('/filmes/:id', function (req, res) {
-    console.log("recebi requisição PUT com body: ",req.body);
+    console.log("recebi requisição PUT com body: ", req.body);
     //pega os dados enviados na requisição
     let dados = req.body
     let id = req.params.id
@@ -53,7 +53,7 @@ app.put('/filmes/:id', function (req, res) {
 })
 
 app.delete('/filmes/:id', function (req, res) {
-    console.log("recebi requisição POST com body: ",req.body);
+    console.log("recebi requisição POST com body: ", req.body);
     //pega os dados enviados na requisição
     let dados = req.body
     let id = req.params.id
